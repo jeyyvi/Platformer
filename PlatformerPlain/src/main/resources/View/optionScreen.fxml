@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.platformerplain.controller.OptionScreenController">
+    <children>
+        <ImageView fx:id="backgroundImageView" fitHeight="724.0" fitWidth="1302.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <image>
+                <Image url="@../Image/GameScreenBackground.png" />
+            </image>
+        </ImageView>
+        <StackPane alignment="TOP_CENTER" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.58" prefHeight="567.0" prefWidth="915.0" style="-fx-background-color: white; -fx-background-radius: 30;" StackPane.alignment="CENTER" />
+                <VBox alignment="TOP_CENTER" spacing="20.0" StackPane.alignment="TOP_CENTER">
+                    <StackPane alignment="TOP_LEFT" prefHeight="150.0" prefWidth="200.0">
+                        <children>
+                            <Button fx:id="backToMenuBtn" graphicTextGap="0.0" mnemonicParsing="false" onAction="#handleBackToMenuAction" onMouseClicked="#handleBackToMenuAction" prefHeight="92.0" prefWidth="123.0" style="-fx-background-color: transparent;">
+                                <padding>
+                                    <Insets left="15.0" top="10.0" />
+                                </padding>
+                                <graphic>
+                                    <ImageView fitHeight="109.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../Image/BackToMenu.png" />
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                        </children>
+                        <VBox.margin>
+                            <Insets />
+                        </VBox.margin>
+                    </StackPane>
+                    <Label text="Choose Background Colour">
+                        <font>
+                            <Font name="BM JUA OTF" size="64.0" />
+                        </font>
+                        <VBox.margin>
+                            <Insets bottom="60.0" top="50.0" />
+                        </VBox.margin>
+                    </Label>
+                    <StackPane prefHeight="49.0" prefWidth="1300.0">
+                        <children>
+                            <ColorPicker fx:id="colorPicker" prefHeight="72.0" prefWidth="227.0" style="-fx-background-color: lightgrey;" />
+                        </children>
+                        <VBox.margin>
+                            <Insets bottom="30.0" top="20.0" />
+                        </VBox.margin>
+                    </StackPane>
+                    <Button fx:id="applyBtn" onAction="#handleApplyAction" prefHeight="24.0" prefWidth="183.0" style="-fx-background-color: transparent;">
+                        <graphic>
+                            <Label text="APPLY">
+                                <font>
+                                    <Font name="BM JUA OTF" size="40.0" />
+                                </font>
+                            </Label>
+                        </graphic>
+                    </Button>
+                </VBox>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>

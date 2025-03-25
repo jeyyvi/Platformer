@@ -1,0 +1,10 @@
+module:com.example.platformerplain
+com.example.platformerplain
+com.example.platformerplain.command
+com.example.platformerplain.config
+com.example.platformerplain.controller
+com.example.platformerplain.model
+com.example.platformerplain.observer
+com.example.platformerplain.state
+com.example.platformerplain.util
+com.example.platformerplain.view

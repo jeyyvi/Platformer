@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" prefHeight="723.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.platformerplain.controller.EndScreenController">
+   <children>
+      <ImageView fx:id="backgroundImageView" fitHeight="724.0" fitWidth="1440.0" pickOnBounds="true" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../Image/Background.png" />
+         </image>
+      </ImageView>
+      <StackPane alignment="TOP_CENTER" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="522.0" prefWidth="704.0" spacing="20.0">
+               <StackPane alignment="TOP_LEFT" prefHeight="88.0" prefWidth="704.0">
+                  <children>
+                     <Button fx:id="backToMenuBtn" onAction="#handleBackToMenuAction" style="-fx-background-color: transparent;" StackPane.alignment="TOP_LEFT">
+                        <graphic>
+                           <ImageView fitHeight="88.0" fitWidth="90.0" pickOnBounds="true">
+                              <image>
+                                 <Image url="@../Image/HomeButton.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                        <StackPane.margin>
+                           <Insets left="20.0" top="20.0" />
+                        </StackPane.margin>
+                     </Button>
+                  </children>
+               </StackPane>
+               <Text fx:id="gameOverText" style="-fx-font-size: 64px;" text="Game Over!">
+                  <font>
+                     <Font name="BM JUA OTF" size="64.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets />
+                  </VBox.margin>
+               </Text>
+               <Text fx:id="scoreText" style="-fx-font-size: 24px;">
+                  <font>
+                     <Font name="BM JUA OTF" size="24.0" />
+                  </font>
+               </Text>
+               <Text fx:id="highestScoreText" style="-fx-font-size: 24px;">
+                  <font>
+                     <Font name="BM JUA OTF" size="24.0" />
+                  </font>
+               </Text>
+               <ScrollPane fx:id="highScoresScrollPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="350.0" style="-fx-border-radius: 30; -fx-background-color: lightgrey;" visible="false">
+                  <content>
+                     <VBox fx:id="highScoresVBox" alignment="CENTER" spacing="5.0" />
+                  </content>
+               </ScrollPane>
+               <HBox alignment="CENTER" spacing="60.0">
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="120.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/ButtonBackground.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="playAgainBtn" onAction="#handlePlayAgainAction" prefHeight="97.0" prefWidth="225.0" style="-fx-background-color: transparent;" text="PLAY AGAIN">
+                           <font>
+                              <Font name="BM JUA OTF" size="32.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="120.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/ButtonBackground.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="toggleHighScoresBtn" onAction="#handleToggleHighScoresAction" style="-fx-background-color: transparent;" text="VIEW SCORE">
+                           <font>
+                              <Font name="BM JUA OTF" size="32.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="120.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/ButtonBackground.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="exitGameBtn" onAction="#handleExitGameAction" prefHeight="97.0" prefWidth="217.0" style="-fx-background-color: transparent;" text="EXIT GAME">
+                           <font>
+                              <Font name="BM JUA OTF" size="32.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </StackPane>
+                  <VBox.margin>
+                     <Insets />
+                  </VBox.margin>
+                  <padding>
+                     <Insets top="10.0" />
+                  </padding>
+               </HBox>
+               <Button fx:id="nextLevelBtn" onAction="#handleNextLevelAction" prefHeight="86.0" prefWidth="203.0" style="-fx-background-color: transparent;">
+                  <padding>
+                     <Insets left="5.0" />
+                  </padding>
+                  <font>
+                     <Font name="BM JUA OTF" size="32.0" />
+                  </font>
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="247.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../Image/NextLevel.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
